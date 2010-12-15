@@ -5,7 +5,16 @@
 
 <title>Hello Inah</title>
 
-<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">                                         
+	$(document).ready(function() {
+		$("a").click(function(event) {
+			alert("Hello world!");
+			event.preventDefault();
+		});
+	});                             
+</script>
 </head>
 
 <body>
