@@ -1,0 +1,197 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body, html {
+    margin: 10px;
+    padding: 10px;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+    background: #ffffff;
+    color: #414141;
+    height: 100%;
+    width: 100%;
+    font-family: Monaco, "Lucida Console", monospace;
+    font-size: 11px;
+    line-height: 1.5;
+	orphans: 3;
+	/*overflow-x: scroll;*/
+	overflow-x: scroll !important; /*test*/
+	overflow-y: hidden;
+}
+
+a { 
+background:#EEE;
+text-decoration:none;
+cursor:pointer;
+color:#414141;
+}
+
+a:hover {
+	background:#000;
+	color:#fff;
+}
+
+/* Thumbnail / Images
+***********************************************************************************************************/
+.image_container{
+	clear:both;
+	width:200x;
+	display:block
+	position: relative;
+	text-align:center !important;
+}
+
+img{
+	max-width:95px !important;
+	height: auto;
+	margin-right: 5px;
+	margin-bottom:5px;
+	float:left;
+}
+
+
+/* Menu / Navigation
+***********************************************************************************************************/
+#menu_container {
+		overflow: hidden;
+ width:1000px;	background:#fff;
+	height:60px;
+	padding-top:10px;
+	position: fixed;
+	z-index:10;
+
+}
+#menu_container .menu {
+	width:200px;
+	float:left;
+	padding:5 px;
+	margin-right: 25px;
+		line-height:2;
+	
+
+	}
+#menu_container .menu a{
+	text-decoration:none;  
+	color:#414141;
+	font-size:11px; 
+	background:#fff;
+	font-family: "Monaco", monospace;
+}
+#menu_container .menu a:hover{
+	cursor:crosshair;
+	text-decoration:none; 
+	color:#fff;
+	background:#414141 !important;
+}
+
+#menu_container .blank {
+	letter-spacing:-6px;
+	background:#fff;
+	margin:2px;}
+	
+	
+	/* Body Columns
+***********************************************************************************************************/
+#entry_container {
+	position:absolute;
+	z-index:2;
+	top:150px;
+	width: 2200px;
+	height: 100%;
+	padding-right: 20px;
+	overflow: hidden;
+}
+
+#entry_container .entry {
+	position:relative;
+	float:left;
+	padding:5 px;
+	padding-top:10px;
+	margin-right: 25px;
+	z-index: -1;
+	border-top:dashed;
+	border-top-width:1px;
+	font-style:normal;
+	line-height:1.5;
+	overflow-x: hidden !important; /*test*/
+	overflow-y: hidden;
+	height: 100%;
+	cursor: e-resize;
+	width:200px;
+}
+
+#entry_container .entry:hover{
+	background:#CFF; border-bottom-color:}
+
+.content {
+	position:relative;
+	width:200px;
+	clear:both;
+}
+
+
+
+	/* Typography
+***********************************************************************************************************/
+
+.title {
+	font-size:14px;
+	font-weight:bold;
+	text-align:center !important;
+	font-style:italic;
+	margin-bottom:5px;
+}
+
+.tag {
+	font-family:Verdana, Geneva, sans-serif;
+	color:#999;
+	font-size:10px;
+	text-align:center;
+	font-style:italic;
+	margin-bottom:20px;
+}
+
+/* Single Page display
+***********************************************************************************************************/
+
+.single_entry {
+	overflow:auto;
+	position:relative;
+	float:left;
+	width:400px;
+	height:100%;
+	padding:5 px;
+	padding-top:10px;
+	margin-right: 25px;
+	z-index: -1;
+	border-top:dashed;
+	border-top-width:1px;
+	font-style:normal;
+	line-height:1.5;
+}
+
+
+	/* Opened columns
+***********************************************************************************************************/
+
+.opened {
+	cursor: auto;
+	color: #414141;
+	padding-right: 2em;
+	overflow: scroll;
+}
+
+.opened .tools{
+	display: block;
+}
+.opened .postTags li, .opened .postAuthors li{
+	display: inline;
+}

@@ -1,0 +1,376 @@
+/* GLOBAL ——————————————————————————————————————————————————————————————————————— GLOBAL */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+}
+body {	
+	font: 62.5%/1.5em Verdana, "Bitstream Vera sans", Helvetica, sans-serif;
+	background-color: white;
+			/*background-image: url(grid.png);
+										background-position: 0px -2px;*/
+	/*overflow-x: scroll;*/
+	overflow-x: scroll !important; /*test*/
+	overflow-y: hidden;
+}
+a {
+	color: #A1F;
+	cursor: pointer;
+}
+h2 {
+	font-weight: normal;
+}
+h3 {
+	font-size: 1em; /* 11 px */
+	margin-top: 1.363636em; /* 15px relatif à 11px */
+}
+dt {
+	color: #888;
+}
+dd {
+	margin-bottom: 1.363636em; /* 15px relatif à 11px */
+}
+dt {
+	font-weight:bold;
+}
+sup {
+	vertical-align: 0;
+}
+li {
+	list-style: none;
+}
+img {
+	display:block;
+	margin: 1.363636em auto;  /* 15px relatif à 11px */
+	margin-bottom:0em;
+}
+/* CONTENT ————————————————————————————————————————————————————————————————————— CONTENT */
+#content {
+	position:absolute;
+	z-index:2;
+	left:0;
+	top:0;
+	width: 800em;
+	height: 100%;
+	padding-right: 1.1em; /* 11 px */
+	padding-left: 1.1em; /* 11 px */
+	overflow: hidden;
+	font-size: 1.1em; /* 11 px */
+}
+/* THEME ——————————————————————————————————————————————————————————————————————— THEME */
+#theme {
+	position: fixed;
+	left: 1.1em; /* 11 px */
+	top:0;
+	z-index:1;
+	font-size: 1.1em; /* 11 px */
+}
+#theme * {
+	color: yellow;
+	font-style: italic;
+	font-weight: bold;
+	cursor: default;
+}
+#theme em {
+	font-style: normal;
+}
+.themeNumber {
+	margin-top: 0.5em; /* 15 px relatif à 30px*/
+	font-size: 2.727273em; /* 30 px relatif à 11px*/
+	line-height: 1em; /* 30 px relatif à 30px*/
+}
+.themeName {
+	position: relative;
+	top: 0.1em;
+	font-size: 5.454545em; /* 60 px relatif à 11px*/
+	line-height: 1em; /* 60 px relatif à 60px*/
+}
+.themeDates {
+	margin-top: 0.5em; /* 15 px relatif à 30px*/
+	font-size: 2.727273em; /* 30 px relatif à 11px*/
+	line-height: 1em; /* 30 px relatif à 30px*/
+}
+/* POST —————————————————————————————————————————————————————————————————————— POST */
+.post{
+/*	position: relative;
+	z-index:3;*/
+	color:#BBB;
+	width: 13em;
+	height: 100%;
+	margin-right: 1em;
+	margin-left: 1em;
+	float: left;
+	overflow-x: hidden !important; /*test*/
+	overflow-y: hidden;
+	cursor: e-resize;
+}
+.post:hover {
+	color: black;
+}
+.post p {
+	margin-bottom:1.363636em; /* 15px relatif à 11px */
+}
+.post .resume {
+	padding-bottom:0.22222222em;
+	color:#888;
+	font-size:0.81818182em; /* 9px relatif à 11px*/
+	line-height:1.6666667em; /* 15px relatif à 9px */
+}
+/* META-DATA ————————————————————————————————————————————————————————————————— META-DATA */
+.postTags {
+	margin-top: 2.727272em; /* 30 px relatif à 11px*/
+	height: 3.454545em; /* 30+8 px relatif à 11px */
+	min-height: 3.454545em; /* 30+8 px relatif à 11px */
+	margin-bottom: 2em; /* 30-8 px relatif à 11px*/
+	overflow: hidden;
+	color: #000;
+}
+.postTags:hover {
+	height: auto;
+}
+.postAuthors {
+	height: 3.454545em; /* 30+8 px relatif à 11px */
+	min-height: 3.454545em; /* 30+8 px relatif à 11px */
+	margin-bottom: 3.363636em; /* 45-8 px relatif à 11px*/
+	overflow: hidden;
+	color: #000;
+}
+.postTags span, .postAuthors span {
+	text-decoration: underline;
+}
+.postAuthors:hover {
+	height: auto;
+}
+.postTitle {
+	/*	position: relative;
+	bottom: 0.10em;*/
+	height: 3.785714em; /* 45+8 px relatif à 14px */
+	margin-bottom: 1.571429em; /* 30-8 px relatif à 14px*/
+	overflow: hidden;
+	font-size: 1.272727em; /* 14 px relatif à 11px */
+	text-transform: uppercase;
+	border-bottom: 1px dotted #000;
+	color: black;
+	
+}
+/* POST-CONTENT ———————————————————————————————————————————————————————————— POST-CONTENT */
+.postContent {
+	position:relative;
+	bottom:1px;
+	padding-bottom:10em;
+}
+.postContent li {
+	margin-bottom: 1.363636em; /* 15px relatif à 11px */
+}
+/* PARATEXTE ——————————————————————————————————————————————————————————————————— PARATEXTE */
+.header {
+	font-style:italic;
+}
+.post .legend {
+	margin-top:0.222222em; /* 2px relatif à 9px */
+	margin-bottom: 1.4444444em; /* 13px relatif à 9px */
+	color:#888;
+	font-size:0.81818182em; /* 9px relatif à 11px*/
+}
+.footnoteCall {
+	color:#A1F;
+	font-weight:bold;
+	font-size:0.81818182em; /* 9px relatif à 11px*/
+	cursor: help;
+	vertical-align:0.22222222em; /* 2px relatif à 9px */
+}
+.footnote {
+	color:#888;
+}
+.footnoteCall:hover .footnote {
+	display:inline;	
+	font-size:1.2222222em; /* 11px relatif à 9px*/
+	font-weight:normal;
+	vertical-align:-0.22222222em;
+}
+.footnoteCall .footnote {
+	display:none;
+	color:#A1F;
+}
+.done {
+	text-decoration:line-through;
+}
+/* TOOLS ——————————————————————————————————————————————————————————————————— TOOLS */
+.tools {
+    display: none;
+	font-size:0.81818182em; /* 9px relatif à 11px*/
+	margin-bottom: 1.6666667em; /* 15px relatif à 9px */
+}
+/* COMMENTS ———————————————————————————————————————————————————————————————— COMMENTS*/
+.comments {
+    display: none;
+}
+.comments dl {
+	padding-left:3em;
+	margin-bottom: 1.363636em;
+}
+.comments dt {
+	border-bottom: 1px dotted #999;
+}
+.comments dt a {
+	color:#888;
+}
+.comments dt span {
+	font-size: 0.81818182em; /* 9px relatif à 11px*/
+	font-weight:normal;
+}
+.comments dd {
+	margin-bottom: 1.363636em; /* 15px relatif à 11px */
+}
+.commentsAdd, .commentsNumber {
+	font-size:0.81818182em; /* 9px relatif à 11px*/
+	line-height: 1.6666667em; /* 15px relatif à 9px */
+	margin-bottom: 1.6666667em;
+}
+.commentsNumber {
+	margin-top: -1.6666667em; /* 15px relatif à 9px */
+}
+.commentsAdd {
+	text-indent:3.6666667em; /* 33px/3em relatif à 11px*/
+	color:#888;
+}
+#newComment {
+	padding-left:3em;
+}
+#newComment p {
+	margin: 0;
+}
+#newComment textArea, #newComment input[type='text'] {
+	font-family: Verdana, "Bitstream Vera sans", Helvetica, sans-serif;
+	font-size:1em;
+	border: 1px solid #A1F;
+	width:100%;
+	margin-bottom:1em;
+}
+#newComment textArea {
+	height:10em;
+}
+#newComment input[type='text'] {
+	width:50%;
+}
+#newComment label {
+	display:block;
+	width:13%;
+	float:left;
+}
+#newComment input[type='button'] {
+	margin-bottom: 1.363636em; /* 15px relatif à 11px */;
+}
+#newComment .optional {
+	font-size:0.81818182em; /* 9px relatif à 11px*/
+	vertical-align:1.2222222em; /* 11px relatif à 9px*/
+	color:#888;
+}
+/* CHAT ———————————————————————————————————————————————————————————————————— CHAT*/
+#chat {
+	background-image: url(images/pxAnimated.gif);
+	background-repeat: repeat-y;
+	width:34em;
+	overflow: hidden;
+	/*height:100%;*/
+	cursor:auto;
+	height: 100%;
+	margin-top: 2.727272em; /* 30 px relatif à 11px*/
+	margin-right: 1em;
+	margin-left: 1em;
+	float: left;
+	
+	padding-top:1.363636em; /* 15px relatif à 11px */;
+}
+#lastMessages {
+	border-top: 1px dotted #999;
+	border-bottom: 1px dotted #999;
+	height:65%;
+	overflow:auto;
+	padding-right:1em;
+	margin-bottom:1.363636em; /* 15px relatif à 11px */
+}
+#lastMessages dt {
+	color:#A1F;
+}
+#lastMessages dt .chatUser {
+	width:29em;
+	float:left;
+}
+#lastMessages dt .chatDate {
+	font-size:0.81818182em; /* 9px relatif à 11px*/
+	color:#888;
+	float:right;
+}
+#chatMessage {
+	height:20%;
+}
+#messageText {
+	font-size:1em;
+	width:33em;
+	height:100%;
+	margin-bottom:1.363636em; /* 15px relatif à 11px */
+	border: 1px solid #A1F;
+	font-family: Verdana, "Bitstream Vera sans", Helvetica, sans-serif;
+}
+/* SOMMAIRE —————————————————————————————————————————————————————————————————— SOMMAIRE*/
+.sommaire, .lastComments {
+	margin-top:21.909091em; /* 241px relatif à 11px*/
+}
+.sommaire, .sommaire dt{
+	color:black;
+}
+.sommaire li {
+	margin-bottom:0;
+	border-top: 1px dotted #999;
+	position:relative;
+	margin-top:-1px;
+}
+.sommaire dd {
+	margin-bottom: 1.363636em; /* 15px relatif à 11px */
+}
+.lastComments h3{
+	margin-top:0;
+	margin-bottom: 1.363636em; /* 15px relatif à 11px */
+	color: black;
+}
+.lastComments dt{
+	border-top: 1px dotted #999;
+}
+.links li {
+	border-top: 1px dotted #999;
+	margin-bottom: 1.363636em; /* 15px relatif à 11px */
+}
+.links p {
+	margin:0;
+}
+/* ANNONCE ———————————————————————————————————————————————————————————————————— ANNONCE*/
+.annonceDate {
+	font-family: Georgia; 
+	font-size:2.545454em; 
+	font-style:italic; 
+	line-height:1.071428em;
+	margin-bottom:0.535714em;
+	color:black;
+}
+.annonce p {
+	margin-bottom:0;
+	text-indent:1.5em;
+}
+/* OPENED COLUMNS ————————————————————————————————————————————————————————————— OPENED COLUMNS*/
+.opened {
+	cursor: auto;
+	color: black;
+	padding-right: 2em;
+	overflow: scroll;
+}
+.opened .tools{
+	display: block;
+}
+.opened .postTags li, .opened .postAuthors li{
+	display: inline;
+}

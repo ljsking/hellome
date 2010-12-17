@@ -1,0 +1,163 @@
+* {
+	margin: 0pt;
+	padding: 0pt;
+}
+body {
+	font-family: Georgia, Times, serif;
+	font-size: 12pt;
+	line-height: 15pt;
+	margin-left:75pt;
+	margin-right:25pt;
+}
+a {
+	color: #A1F;
+}
+h2 {
+	font-weight: normal;
+}
+h3 {
+	font-size: 12pt;
+	margin-top: 15pt;
+	page-break-after: avoid;
+}
+dt {
+	color: #888;
+}
+dd {
+	margin-bottom: 15pt;
+}
+dt {
+	font-weight:bold;
+}
+sup {
+	vertical-align: 0;
+}
+li {
+	list-style: none;
+}
+img {
+	display:block;
+	margin: 15pt auto;
+	margin-bottom:0;
+	page-break-after: avoid;
+	page-break-inside: avoid;
+}
+/* THEME ——————————————————————————————————————————————————————————————————————— THEME */
+#theme * {
+	color: #FD0;
+	font-style: italic;
+	font-weight: bold;
+}
+#theme em {
+	font-style: normal;
+}
+.themeNumber {
+	margin-top: 15pt;
+	font-size: 30pt;
+	line-height: 30pt;
+}
+.themeName {
+	font-size: 60pt;
+	line-height: 55pt;
+}
+.themeDates {
+	font-size: 30pt;
+	line-height: 30pt;
+}
+/* PARATEXTE ——————————————————————————————————————————————————————————————————— PARATEXTE */
+.header {
+	font-style:italic;
+}
+.post .legend {
+	margin-top:2pt;
+	margin-bottom: 9pt;
+	color:#888;
+	font-size:9pt;
+}
+.footnoteCall {
+	font-size:7pt;
+	vertical-align:6pt;
+	line-height:1pt;
+	page-break-before: avoid;
+}
+.footnote {
+	color:#888;
+	font-size:9pt;
+	vertical-align:-6pt;
+	line-height:15pt;
+}
+.tools {
+	display:none;
+}
+/* CONTENT ————————————————————————————————————————————————————————————————————— CONTENT */
+#content {
+	margin-top:-185pt;
+}
+/* POST —————————————————————————————————————————————————————————————————————— POST */
+.post{
+	width:400pt !important;
+}
+.post p {
+	margin-bottom:15pt;
+}
+.post a:after{
+	content:" ["attr(href)"]";
+	font-size:9pt;
+	color:#CCC;
+}
+.post .resume {
+	color:#888;
+	font-size: 9pt;
+}
+/* META-DATA ————————————————————————————————————————————————————————————————— META-DATA */
+.postTags {
+	text-decoration: underline;
+	page-break-before: always;
+}
+.postAuthors {
+	margin-top:15pt;
+	font-size:18pt;
+	line-height:18pt;
+}
+.postTitle {
+	margin-top:15pt;
+	padding-bottom: 5pt;
+	margin-bottom: 2pt;
+	font-size: 24pt;
+	line-height: 26pt;
+	font-weight:bold;
+	border-bottom: 1px dotted #999;
+}
+/* POST-CONTENT ———————————————————————————————————————————————————————————— POST-CONTENT */
+.postContent {
+}
+.postContent li {
+	margin-bottom: 15pt;
+}
+/* EXCEPTIONS —————————————————————————————————————————————————————————————— EXCEPTIONS*/
+.comments dl {
+	padding-left:30pt;
+	margin-bottom: 15pt;
+}
+.comments dt {
+	border-bottom: 1px dotted #999;
+	page-break-after: avoid;
+}
+.comments dt a {
+	color:#888;
+}
+.comments dt span {
+	font-size: 9pt;
+	font-weight:normal;
+}
+.comments dd {
+	margin-bottom: 15pt;
+}
+.comments p {
+	font-size: 9pt;
+	line-height: 15pt;
+	margin-bottom: 15pt;
+}
+.commentsAdd {
+	display:none;
+}
