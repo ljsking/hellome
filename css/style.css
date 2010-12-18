@@ -44,17 +44,18 @@ a:hover {
 .image_container{
 	clear:both;
 	width:200x;
-	display:block
+	display:block;
 	position: relative;
+	margin-bottom:5px;
 	text-align:center !important;
+	z-index:-1;
 }
 
 img{
 	max-width:95px !important;
 	height: auto;
-	margin-right: 5px;
-	margin-bottom:5px;
-	float:left;
+	margin-bottom:auto;
+	display:inline;
 }
 
 
@@ -62,7 +63,8 @@ img{
 ***********************************************************************************************************/
 #menu_container {
 		overflow: hidden;
- width:1000px;	background:#fff;
+ width:1000px;	
+ background:#fff;
 	height:60px;
 	padding-top:10px;
 	position: fixed;
@@ -102,39 +104,43 @@ img{
 ***********************************************************************************************************/
 #entry_container {
 	position:absolute;
+	top:0px;
 	z-index:2;
-	top:150px;
-	width: 2200px;
 	height: 100%;
+	width: 4200px;
+	/* can the container width be the value of number of (entry x 220px)+200px ? */
+	
 	padding-right: 20px;
 	overflow: hidden;
-}
+	}
 
-#entry_container .entry {
+.entry {
+	top:150px;
 	position:relative;
 	float:left;
 	padding:5 px;
 	padding-top:10px;
 	margin-right: 25px;
-	z-index: -1;
+	z-index: 5;
 	border-top:dashed;
 	border-top-width:1px;
 	font-style:normal;
 	line-height:1.5;
 	overflow-x: hidden !important; /*test*/
 	overflow-y: hidden;
-	height: 100%;
 	cursor: e-resize;
 	width:200px;
 }
 
 #entry_container .entry:hover{
-	background:#CFF; border-bottom-color:}
+	width:300px;
+	
 
+}
 .content {
 	position:relative;
-	width:200px;
 	clear:both;
+	z-index:-1;
 }
 
 
@@ -148,6 +154,8 @@ img{
 	text-align:center !important;
 	font-style:italic;
 	margin-bottom:5px;
+		z-index:-1;
+
 }
 
 .tag {
@@ -157,19 +165,37 @@ img{
 	text-align:center;
 	font-style:italic;
 	margin-bottom:20px;
+		z-index:-1;
+
 }
 
 /* Single Page display
 ***********************************************************************************************************/
 
+
+.single_entry_title {
+	top:150px;
+	position:relative;
+	float:left;
+	padding:5 px;
+	padding-top:10px;
+	margin-right: 25px;
+	z-index: -1;
+	border-top:dashed;
+	border-top-width:1px;
+	font-style:normal;
+	line-height:1.5;
+	width:200px;
+}
 .single_entry {
-	overflow:auto;
+	top:150px;
+	overflow: auto;
 	position:relative;
 	float:left;
 	width:400px;
-	height:100%;
 	padding:5 px;
 	padding-top:10px;
+	padding-right:5px;
 	margin-right: 25px;
 	z-index: -1;
 	border-top:dashed;
@@ -179,10 +205,13 @@ img{
 }
 
 
+
+
 	/* Opened columns
 ***********************************************************************************************************/
 
 .opened {
+	top:150px;
 	cursor: auto;
 	color: #414141;
 	padding-right: 2em;
