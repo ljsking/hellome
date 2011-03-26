@@ -23,8 +23,8 @@ body {
     line-height: 1.5;
 	orphans: 3;
 	/*overflow-x: scroll;*/
-	overflow-x: scroll !important; /*test*/
-	overflow-y: hidden;
+	overflow-x: hidden !important; /*test*/
+	overflow-y: auto;
 }
 
 a { 
@@ -39,7 +39,8 @@ a:hover {
 	color:#fff;
 }
 
-/* Thumbnail / Images
+
+/* Index / Images
 ***********************************************************************************************************/
 .image_container{
 	clear:both;
@@ -51,11 +52,15 @@ a:hover {
 	z-index:-1;
 }
 
-img{
+#index_img{
 	max-width:95px !important;
 	height: auto;
 	margin-bottom:auto;
 	display:inline;
+}
+
+#thumbnail{
+	z-index:auto;
 }
 
 
@@ -63,12 +68,13 @@ img{
 ***********************************************************************************************************/
 #menu_container {
 		overflow: hidden;
- width:1000px;	
+ width:95%;	
  background:#fff;
-	height:60px;
+	height:100px;
 	padding-top:10px;
 	position: fixed;
-	z-index:10;
+	z-index:100;
+	min-width:900px;
 
 }
 #menu_container .menu {
@@ -91,7 +97,7 @@ img{
 	cursor:crosshair;
 	text-decoration:none; 
 	color:#fff;
-	background:#414141 !important;
+	background:#000 !important;
 }
 
 #menu_container .blank {
@@ -102,70 +108,74 @@ img{
 	
 	/* Body Columns
 ***********************************************************************************************************/
-#entry_container {
+.entry_container {
+	width:90%; 
 	position:absolute;
-	top:0px;
-	z-index:2;
-	height: 100%;
-	width: 4200px;
-	/* can the container width be the value of number of (entry x 220px)+200px ? */
-	
-	padding-right: 20px;
-	overflow: hidden;
-	}
-
+	top:180px;
+	min-width:900px;
+}
 .entry {
-	top:150px;
+	vertical-align: top;
 	position:relative;
-	float:left;
+	display: inline-block;
 	padding:5 px;
-	padding-top:10px;
-	margin-right: 25px;
-	z-index: 5;
+	padding-top:5px;
+	margin-top:5px;
+	margin-bottom:0px;
+	margin-right: 19px;
 	border-top:dashed;
 	border-top-width:1px;
-	font-style:normal;
 	line-height:1.5;
-	overflow-x: hidden !important; /*test*/
-	overflow-y: hidden;
-	cursor: e-resize;
+	cursor:crosshair;
 	width:200px;
+	z-index:auto;
 }
 
-#entry_container .entry:hover{
-	width:300px;
-	
 
+.entry:hover{
+	background-color:#3FF;
 }
+
 .content {
 	position:relative;
 	clear:both;
-	z-index:-1;
 }
 
+.footer{
+position: absolute;
+bottom: 5px;
+}
 
 
 	/* Typography
 ***********************************************************************************************************/
 
-.title {
+.category {
+	color:#999;
+	font-size:10px;
+	text-align:left;
+	border-bottom:dashed;
+	border-bottom-width:1px;
+	border-bottom-color:#000;
+	margin-bottom:10px;
+
+}
+.description {
 	font-size:14px;
 	font-weight:bold;
 	text-align:center !important;
 	font-style:italic;
-	margin-bottom:5px;
-		z-index:-1;
+	padding:10px;	min-height:70px;
+	vertical-align:middle;
 
 }
 
-.tag {
-	font-family:Verdana, Geneva, sans-serif;
-	color:#999;
-	font-size:10px;
+
+.title {
 	text-align:center;
-	font-style:italic;
-	margin-bottom:20px;
-		z-index:-1;
+text-decoration:underline;
+		line-height:1.5;
+		margin-bottom:10px;
 
 }
 
@@ -180,7 +190,7 @@ img{
 	padding:5 px;
 	padding-top:10px;
 	margin-right: 25px;
-	z-index: -1;
+	z-index: 1;
 	border-top:dashed;
 	border-top-width:1px;
 	font-style:normal;
@@ -189,15 +199,15 @@ img{
 }
 .single_entry {
 	top:150px;
-	overflow: auto;
+	overflow-y: auto;
 	position:relative;
 	float:left;
-	width:400px;
+	width:600px;
 	padding:5 px;
 	padding-top:10px;
 	padding-right:5px;
 	margin-right: 25px;
-	z-index: -1;
+	z-index: 1;
 	border-top:dashed;
 	border-top-width:1px;
 	font-style:normal;
