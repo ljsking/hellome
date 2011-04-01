@@ -6,8 +6,25 @@
 
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 		
-    
-
+    <script src="js/jquery.min.js"></script>
+ 	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".entry").each(
+				function(intIndex) {
+					var l = Math.floor(Math.random() * ($(".entry_container").width()-$(this).width()));
+					var t = Math.floor(Math.random() * $(".entry_container").height());
+					$(this).css("left", l);
+					$(this).css("top", t);
+					var R = Math.floor(Math.random() * 68) + 187;
+					var G = Math.floor(Math.random() * 68) + 187;
+					var B = Math.floor(Math.random() * 68) + 187;
+					console.log(R.toString(16)+G.toString(16)+B.toString(16));
+					$(this).css("background-color", '#'+R.toString(16)+G.toString(16)+B.toString(16));
+					
+				}
+			);
+		});
+	</script>
 
 </head>
 
@@ -98,7 +115,6 @@ La Bella Figura Milanese <br />
 <div class="description">La bella figura milanese!
 </div >
 </div>
-</a>
 
 
 

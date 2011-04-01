@@ -109,14 +109,14 @@ a:hover {
 	/* Body Columns
 ***********************************************************************************************************/
 .entry_container {
-	width:90%; 
+	width:900px; 
+	height:300px;
 	position:absolute;
 	top:180px;
-	min-width:900px;
 }
 .entry {
 	vertical-align: top;
-	position:relative;
+	position:absolute;
 	display: inline-block;
 	padding:5 px;
 	padding-top:5px;
