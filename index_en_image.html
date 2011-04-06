@@ -6,22 +6,22 @@
 
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 		
-        <script type="text/javascript" src="z_jquery for images/scriptaculous-js-1.8.1/lib/prototype.js">
-        </script> 
-        <script type="text/javascript" src="z_jquery for images/scriptaculous-js-1.8.1/src/scriptaculous.js?load=effects,dragdrop"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.custom.min.js"></script>
 
 <script type="text/javascript">
-var elements =[
-'draggable',
-'img'
-];
-window.onload=function() {
-	elements.each(
-	function(item) {
-		new Draggable(item, {});
-	}
+$(document).ready(function(){
+	$(".draggable").each(
+		function(intIndex) {
+			var l = Math.floor(Math.random() * ($("#draggable_container").width()-$(this).width()));
+			var t = Math.floor(Math.random() * $("#draggable_container").height());
+			$(this).css("left", l);
+			$(this).css("top", t);
+			$(this).draggable();
+			
+		}
 	);
-}
+});
 </script>
 </head>
 
@@ -57,10 +57,10 @@ Graphic Designer<br /></div>
 
 
  </div>
- <div id="draggable" ondblclick="location.href='file:///Users/Aiyah/hellome/labella_sample.html';"><img src="images/bella.png" /></div>
-<img src="images/bella.png" />
- <div id="draggable"><img src="images/eco.png" /></div> 
- 
+<div id='draggable_container'>
+ <div class="draggable" ondblclick="location.href='file:///Users/Aiyah/hellome/labella_sample.html';"><img src="images/bella.png" /></div>
+ <div class="draggable"><img src="images/eco.png" /></div> 
+ </div>
  
 
  

@@ -234,3 +234,11 @@ text-decoration:underline;
 .opened .postTags li, .opened .postAuthors li{
 	display: inline;
 }
+
+.draggable {
+	position:absolute;
+}
+
+#draggable_container {
+    width: 600px;
+}
